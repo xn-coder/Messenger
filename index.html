@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Messager</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Web Messenger</h3>
+            <button class="profile" id="profile-btn">
+                <img src="./res/profile.png" id="profile">
+            </button>
+        </div>
+        
+        <div class="content">
+            <div class="left-content">
+                <div class="menu-bar">
+                    <div class="search">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="menu-btn">
+                        <button id="menu" class="mn-it">
+                            <i class="fa-solid fa-bars mn-it"></i>
+                        </button>
+                        <div class="menu" style="display: none;">
+                            <div class="menu-item" id="profile-menu">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Profile</span>
+                            </div>
+                            <div class="menu-item" id="setting-menu">
+                                <i class="fa-solid fa-gear"></i>
+                                <span>Setting</span>
+                            </div>
+                            <div class="menu-item" id="logout-menu">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>Logout</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-list">
+                    <!-- <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10:05 am</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact">
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="sub-info">
+                            <h4>John Doe</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero aspernatur explicabo
+                                dolor eius obcaecati expedita, rem cum! Repudiandae veniam earum quo voluptatibus
+                                itaque?</p>
+                        </div>
+                        <div class="status">
+                            <div class="date">10-05-24</div>
+                            <span>1</span>
+                        </div>
+                    </div> -->
+
+                    <div class="add-contacts">
+                        <button id="add">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="no-contact-selected">
+                    <h2>No contact selected</h2>
+                    <p style="margin-top: 20px;">Select contact from left panel for sending and see received messages
+                    </p>
+                </div>
+                <div class="contact-selected">
+                    <div class="contact-profile">
+                        <button class="back">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <div class="contact-image">
+                            <img src="./res/profile.png">
+                        </div>
+                        <div class="contact-name">
+                            <h3>John Doe</h3>
+                        </div>
+                    </div>
+                    <div class="messages">
+                        <!-- <div class="msg-date"><span>10/05/24</span></div>
+                        <div class="sender msg">Lorem ipsum dolor sit amet 
+                            <div class="sub-box">
+                                <div class="time">10:05 am
+                                </div>
+                                <i class="fa-sharp fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="receiver msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+                            quibusdam aperiam ducimus error consequuntur, culpa rem alias tenetur a, modi quidem libero
+                            dolor? Eaque eligendi facilis ullam,
+                            <div class="sub-box">
+                                <div class="time">10:05 am
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="message-input">
+                        <input type="text" id="msg-input" placeholder="Message...">
+                        <button id="send-msg-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popupbox">
+        <div class="contact-manage">
+            <div class="tabs">
+                <button class="tab active" id="tab-contact">
+                    <span>Contacts</span>
+                </button>
+                <button class="tab" id="tab-add">
+                    <span>Add</span>
+                </button>
+                <button class="tab" id="tab-pending">
+                    <span>Pendings</span>
+                    <span class="badge">0</span>
+                </button>
+            </div>
+            <div class="tab-body">
+                <div class="contactbox-body" id="contact-body" style="display: block;">
+                    <div class="contact-search">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="contact-list">
+                        <div class="no-contact" style="display: none;">
+                            <h3>No contacts</h3>
+                        </div>
+                        <div class="contact-loading" style="display: none;">
+                            <svg style="left: 50%;
+                                top: 50%;
+                                position: absolute;
+                                transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);" preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 187.3 93.7" height="100px">
+                                    <path
+                                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                                        stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none"
+                                        id="outline" stroke="#4E4FEB"></path>
+                                    <path
+                                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                                        stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" stroke="#4E4FEB"
+                                        fill="none" opacity="0.05" id="outline-bg"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-contain">
+                            <!-- <div class="contact-item">
+                                <img src="./res/profile.png">
+                                <div class="contact-name">
+                                    <h4>John Doe</h4>
+                                    <p>15151554262</p>
+                                </div>
+                                <span>Friends</span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="contactbox-body" id="add-body" style="display: none;">
+                    <div class="add-search">
+                        <input type="text" id="add-search" placeholder="Search....">
+                    </div>
+                    <div class="add-list">
+                        <div class="no-add" style="display: none;">
+                            <h3>No contacts</h3>
+                        </div>
+                        <div class="add-loading" style="display: none;">
+                            <svg style="left: 50%;
+                                top: 50%;
+                                position: absolute;
+                                transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);" preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 187.3 93.7" height="100px">
+                                    <path
+                                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                                        stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none"
+                                        id="outline" stroke="#4E4FEB"></path>
+                                    <path
+                                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                                        stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" stroke="#4E4FEB"
+                                        fill="none" opacity="0.05" id="outline-bg"></path>
+                            </svg>
+                        </div>
+                        <div class="add-contain">
+                            <!-- <div class="add-item">
+                                <img src="./res/profile.png">
+                                <div class="add-name">
+                                    <h4>John Doe</h4>
+                                    <p>15151554262</p>
+                                </div>
+                                <div class="buttons">
+                                    <button class="request" style="display: block;">Request</button>
+                                    <button class="req-cancel" style="display: none;">Cancel</button>
+                                    <span style="display: none;">Friends</span>
+                                    <div class="pending-btns" style="display: none;">
+                                        <button class="pend-cancel">
+                                            <i class="fa-regular fa-xmark"></i>
+                                        </button>
+                                        <button class="accept">
+                                            <i class="fa-solid fa-check"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="contactbox-body" id="pending-body" style="display: none;">
+                    <div class="pending-search">
+                        <input type="text" placeholder="Search.....">
+                    </div>
+                    <div class="pending-list">
+                        <div class="no-pending" style="display: none;">
+                            <h3>No contacts</h3>
+                        </div>
+                        <div class="pending-loading" style="display: none;">
+                            <svg style="left: 50%;
+                                top: 50%;
+                                position: absolute;
+                                transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);" preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 187.3 93.7" height="100px">
+                                    <path
+                                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                                        stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none"
+                                        id="outline" stroke="#4E4FEB"></path>
+                                    <path
+                                        d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                                        stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" stroke="#4E4FEB"
+                                        fill="none" opacity="0.05" id="outline-bg"></path>
+                            </svg>
+                        </div>
+                        <div class="pending-contain">
+                            <!-- <div class="pending-item">
+                                <img src="./res/profile.png">
+                                <div class="pending-name">
+                                    <h4>John Doe</h4>
+                                    <p>15151554262</p>
+                                </div>
+                                <div class="buttons">
+                                    <button class="pend-cancel">
+                                        <i class="fa-regular fa-xmark"></i>
+                                    </button>
+                                    <button class="accept">
+                                        <i class="fa-solid fa-check"></i>
+                                    </button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile-manage">
+            <div class="profile-image">
+                <img src="./res/profile.png" id="profile-image">
+                <div class="button">
+                    <button id="profile-remove" style="margin-bottom: 10px;"><i class="fa-sharp fa-solid fa-trash"></i></button>
+                    <input type="file" accept="image/*" id="browse" hidden>
+                    <label for="browse" id="foradd" style="display: block;"><i class="fa-solid fa-pen-to-square"></i></label>
+                </div>
+                <div class="button" id="profile-image-btn" style="display: none;">
+                    <button id="profile-image-cancel">
+                        <i class="fa-regular fa-xmark"></i>
+                    </button>
+                    <button id="profile-image-save">
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="profile-info">
+                <input type="text" placeholder="UserId" id="self-userid" readonly>
+                <input type="text" placeholder="First Name" id="self-firstname" readonly>
+                <input type="text" placeholder="Last Name" id="self-lastname" readonly>
+                <input type="email" placeholder="Email" id="self-email" readonly>
+                <div class="otp" style="display: none;">
+                    <input type="tel" placeholder="Otp" maxlength="6" id="otp">
+                    <span style="margin-left: 10px; display: none;" id="resend-otp">Resend 30 sec</span>
+                    <button style="display: block;" id="send-btn">Send</button>
+                </div>
+            </div>
+            <div class="profile-buttons">
+                <button class="edit" style="display: block;" id="edit-btn">Edit</button>
+                <button class="cancel" style="display: none;" id="cancel-btn">Cancel</button>
+                <button class="save" style="display: none;" id="save-btn">Save</button>
+            </div>
+        </div>
+        <div class="logout-manage">
+            <h3>Are you sure you want to logout?</h3>
+            <div class="buttons">
+                <button id="lg-cancel">Cancel</button>
+                <button id="lg-logout" style="margin-left: 10px;">Logout</button>
+            </div>
+        </div>
+    </div>
+    <div class="popupMessage" style="display: none;">
+        <div class="popup">
+            <div class="detail">
+                <i class="fa-solid fa-circle-check" id="check" style="display: block;"></i>
+                <i class="fa-solid fa-circle-exclamation" id="exclamation" style="display: none;"></i>
+                <div id="message">Please the required fields</div>
+            </div>
+            <button id="popup-ok">Ok</button>
+        </div>
+    </div>
+    <div class="loading">
+        <svg style="left: 50%;
+        top: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);" preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 187.3 93.7" height="250px" width="350px">
+            <path
+                d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" fill="none"
+                id="outline" stroke="#4E4FEB"></path>
+            <path
+                d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z"
+                stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="4" stroke="#4E4FEB"
+                fill="none" opacity="0.05" id="outline-bg"></path>
+        </svg>
+    </div>
+    <div id="context-menu" class="context-menu">
+        <ul>
+            <li id="close-chat">Close chat</li>
+            <li id="clear-chat">Clear chat</li>
+        </ul>
+    </div>
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>

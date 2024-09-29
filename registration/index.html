@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Messenger - Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="image-color"></div>
+        </div>
+        <div class="right">
+            <div class="outer-slider">
+                <div class="header">
+                    <h3>Create your account</h3>
+                </div>
+                <div class="sliders">
+                    <div class="inner-slider" style="display: block;">
+                        <div class="inputs">
+                            <input type="text" id="fname" placeholder="First Name">
+                            <input type="text" id="lname" placeholder="Last Name">
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="buttons">
+                            <div class="inline">
+                                <button onclick="window.location.href = '../index.html'">Sign In</button>
+                                <span>OR</span>
+                                <button id="register">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-slider"  style="display: none;">
+                        <div class="inputs">
+                            <div class="otp">
+                                <input type="tel" id="otp" placeholder="Enter OTP" maxlength="6">
+                                <div class="verify">
+                                    <button id="verify">Verify</button>
+                                    <span id="verified">Verified</span>
+                                </div>
+                            </div>
+                            <input type="password" id="password" placeholder="Password">
+                            <input type="password" id="cpassword" placeholder="Confirm Password">
+                        </div>
+                        <div class="buttons" id="in-buttons">
+                            <button id="back">Back</button>
+                            <button id="next">Next</button>
+                        </div>
+                    </div>
+                    <div class="inner-slider" style="display: none;">
+                        <div class="profile-image">
+                            <img src="../res/profile.png" alt="Profile Image" id="profile">
+                        </div>
+                        <div class="buttons" id="profile-imager">
+                            <input type="file" accept="image/*" id="browse" hidden>
+                            <label for="browse" id="foradd">Browse</label>
+                            <button style="display: none;" id="remove">Remove</button>
+                            <button id="finish">Finish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-slider" style="display: none;">
+                <i class="fa-solid fa-circle-check"></i>
+                <h1>Success</h1>
+                <p>Your account has been created successfully</p>
+                <button onclick="window.location.href = '../index.html'">Login</button>
+            </div>
+        </div>
+    </div>
+    <div class="popupbox" style="display: none;">
+        <div class="popup">
+            <div class="detail">
+                <i class="fa-solid fa-circle-check" id="check" style="display: block;"></i>
+                <i class="fa-solid fa-circle-exclamation" id="exclamation" style="display: none;"></i>
+                <div id="message">Please the required fields</div>
+            </div>
+            <button id="popup-ok">Ok</button>
+        </div>
+    </div>
+    <script src="../js/register.js" type="module"></script>
+</body>
+</html>
+

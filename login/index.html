@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Messenger - Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="image-color"></div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <h2>Login</h2>
+            </div>
+            <div class="inputs">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="buttons">
+                <button id="register">Sign Up</button>
+                <p>OR</p>
+                <button id="login">Sign In</button>
+            </div>
+            <div class="forget">
+                <a>Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+    <div class="popupbox" style="display: none;">
+        <div class="popup">
+            <div class="detail">
+                <i class="fa-solid fa-circle-check" id="check" style="display: block;"></i>
+                <i class="fa-solid fa-circle-exclamation" id="exclamation" style="display: none;"></i>
+                <div id="message">Please the required fields</div>
+            </div>
+            <button id="popup-ok">Ok</button>
+        </div>
+    </div>
+    <script type="module" src="../js/login.js"></script>
+</body>
+</html>
